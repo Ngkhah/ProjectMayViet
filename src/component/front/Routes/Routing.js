@@ -1,9 +1,10 @@
 import React from "react";
-import {Routes, Route, Link } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 import GioHang from "../Pages/GioHang";
 import ThanhToan from "../Pages/ThanhToan";
+import InfoItem from "../Products/InfoItem";
 import Products from "../Products/Products";
-import "./Routing.css"
+import "./Routing.css";
 
 
 
@@ -50,6 +51,7 @@ const Routing = ({productItems, cartItem, handleAddItem,handleRemoveItem,deleteB
     </header>
         <Routes>
             <Route path="/" element={<Products productItems={productItems} cartItem={cartItem} handleAddItem={handleAddItem}/>}/>
+            <Route path="sanpham/:itemID" element={<InfoItem handleAddItem={handleAddItem} />} />
             <Route path="/giohang" element={<GioHang cartItem={cartItem} handleAddItem={handleAddItem} handleRemoveItem={handleRemoveItem} deleteById={deleteById}/>}/>
             <Route path="/thanhtoan" element={<ThanhToan cartItem={cartItem} />} />
         </Routes>

@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
-import data from "./component/back/Data.js";
-import { BrowserRouter} from "react-router-dom";
-import Footer from "./component/front/Footer/Footer";
-import Routing from "./component/front/Routes/Routing";
 import { message } from 'antd';
 import 'antd/dist/antd.css';
+import React, { useEffect, useState } from "react";
+import { BrowserRouter } from "react-router-dom";
+import data from "./component/back/Data.js";
+import Footer from "./component/front/Footer/Footer";
+import Routing from "./component/front/Routes/Routing";
 
 const App = ()=>{
   const {productItems} = data;
